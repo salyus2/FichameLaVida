@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "./Header";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact"
+
 
 import wallpaper1 from "./../../img/Fondo_1.jpg";
 import wallpaper2 from "./../../img/Fondo_2.jpg";
 
 class Homepage extends React.Component {
-    render() {
+       render() {
         const slideImage = [
             {
                 src: wallpaper1,
@@ -17,12 +20,12 @@ class Homepage extends React.Component {
             }
         ]
         return (
-            <div>
-                <h1>Hola</h1>
+            <React.Fragment>
                 <Header
                     slideImage={slideImage}
                 />
-            </div>
+                <Contact/>
+            </React.Fragment>
         )
     }
 }

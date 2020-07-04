@@ -1,0 +1,18 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#wallpaper{
+       width: 100vw;
+       height: 45vh;
+}
+
+#title{
+    font-size: 5rem;
+    position: absolute;
+    top: 13vh;
+    right: 32vw;
+    color: white;
+    text-shadow: black 0px 0px 18px;
+}

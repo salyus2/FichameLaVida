@@ -1,0 +1,16 @@
+#home{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+
+#homeimg{
+    height: 30vh;
+
+}
+
+.hometext{
+    width: 50vw;
+    /* padding: 25px; */
+}
