@@ -1,0 +1,26 @@
+#login{
+    position: absolute;
+    top: 30vh;
+    right: 32vw;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: black 7px 7px;
+    
+}
+
+.field-group{
+    display: block;
+  }
+
+#closer{
+    width: 20px;
+    display: block;
+    margin-left: auto;
+}
+
+#login label{
+    display: block;
+    
+}

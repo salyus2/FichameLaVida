@@ -1,8 +1,10 @@
 #menu{
+
     display: flex;
     justify-content: space-around;
     margin: 0px;
     background-color: #C6F2D9;
+    padding-top: 0px;
 }
 
 .menu{
@@ -17,4 +19,9 @@
 .menu a{
     color: black;
     text-decoration: none;
+}
+
+.menu :hover{
+    background-color: black;
+    color: white;
 }
