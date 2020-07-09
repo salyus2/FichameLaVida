@@ -54,7 +54,7 @@ class TimeSheet extends React.Component {
                         />
                     </fieldset>
                     <fieldset className="text">
-                        <label>Commentarios</label>
+                        <label>Comentarios</label>
                         <input id="text" type="text" placeholder="Text" />
                     </fieldset>
                     <button>Enviar</button>

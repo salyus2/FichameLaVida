@@ -3,7 +3,7 @@ function processFormLogin(event) {
     email: event.target.email.value,
     password: event.target.password.value
 }
-    fetch(config.api.url,{
+    fetch(`${config.api.url}/login`,{
         method: "POST",
         body: data
             }) .then(

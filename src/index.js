@@ -9,6 +9,7 @@ import {
 import * as serviceWorker from './serviceWorker';
 import Homepage from "./components/Homepage/Homepage";
 import Timesheet from "./components/Timesheet/Timesheet"
+import Admin from "./components/admin/Admin"
 
 import "./css/index.css"
 
@@ -19,8 +20,11 @@ ReactDOM.render(
         <Route exact path="/homepage/*">
           <Homepage />
         </Route>
-        <Route exact path= "/timesheet/*">
+        <Route exact path= "/timesheet">
           <Timesheet/>
+        </Route>
+        <Route exact path= "/admin">
+          <Admin/>
         </Route>
         <Route exact path="/">
           <Redirect to="/homepage/"/>
