@@ -2,16 +2,20 @@
     position: absolute;
     top: 30vh;
     right: 32vw;
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: black 7px 7px;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
     
-}
+    }
 
 .field-group{
     display: block;
+    padding: 15px;
   }
 
 #closer{
@@ -22,5 +26,16 @@
 
 #login label{
     display: block;
-    
+    font-size: 2.3rem;    
+}
+
+#login input{
+    font-size: 1.3rem;
+}
+
+#login button{
+    font-size: 1.1rem;
+    width: 10vw;
+    background-color: black;
+    color: white;
 }

@@ -8,6 +8,12 @@ class Login extends React.Component {
 
     constructor(props){
         super(props)
+        this.onSubmit= this.onSubmit.bind(this)
+    }
+    
+    onSubmit(event){
+        event.preventDefault();
+        console.log(event.target.email.value)
     }
     
     render () {
@@ -15,14 +21,14 @@ class Login extends React.Component {
         return(
             <article id= "login">
                 <img src= {closer} alt= "Close Login" id= "closer" onClick= {()=> {hideLogin()}}/>
-                <form>
+                <form onSubmit={e => {this.onSubmit(e)}}>
                 <fielset className= "field-group">
                 <label>Email</label>
-                <input type= "email" placeholder= "Email"/>
+                <input id= "email" type= "email" placeholder= "Email"/>
                 </fielset>   
                 <fielset className= "field-group">
                 <label>Contraseña</label>
-                <input type= "password" placeholder= "Password"/>
+                <input id= "password" type= "password" placeholder= "Password"/>
                 </fielset>
                 <button>Aceptar</button>
                 </form>

@@ -31,13 +31,13 @@ class Homepage extends React.Component {
                     slideImage={slideImage}
                 />
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact path="/homepage">
                         <Home />
                     </Route>
-                    <Route path="/contacto">
+                    <Route path="/homepage/contacto">
                         <Contact />
                     </Route>
-                    <Route path="/*">
+                    <Route path="/homepage/*">
 
                     </Route>
                 </Switch>

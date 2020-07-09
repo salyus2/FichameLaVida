@@ -28,18 +28,18 @@ class Menu extends React.Component {
                 return(
             <ul id= "menu">
                 <li className= "menu">
-                    <a href= "/">
-                        Inicio
+                    <a href= "/homepage/">
+                        <button>Inicio</button>
                     </a>
                 </li>
                 <li className= "menu">
-                    <a href= "/contacto">
-                       Contacto
+                    <a href= "/homepage/contacto">
+                       <button>Contacto</button>
                     </a>
                 </li>
                 <li className= "menu">
                     <a onClick= {()=>{this.showLogin()}}>
-                        Login
+                        <button>Login</button>                        
                     </a>
                     {loginIsShow && <Login hideLogin= {this.hideLogin}/>}
                 </li>

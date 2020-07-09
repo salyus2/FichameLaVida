@@ -1,0 +1,24 @@
+#ficha{
+    width: 50vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    }
+
+#ficha form{
+    text-align: center;
+    border: black solid;
+    font-size: 1.9rem;
+    margin: auto;
+}
+
+
+#ficha form fieldset{
+    border: none;
+    }
+
+#ficha form label{
+    display: block;
+}

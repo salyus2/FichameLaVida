@@ -10,18 +10,27 @@
 .menu{
     padding: 5px 25px;
     font-size: 2rem;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
     list-style: none;
+    
 }
 
 .menu a{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
     color: black;
     text-decoration: none;
+    border-radius: 10px;
 }
 
-.menu :hover{
+.menu a :hover{
     background-color: black;
-    color: white;
+    color: white;    
+}
+
+.menu a button{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
 }
