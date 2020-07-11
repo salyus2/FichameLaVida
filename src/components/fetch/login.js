@@ -1,3 +1,5 @@
+import config from "./../../config"
+
 function processFormLogin(event) {
     const data= {
     email: event.target.email.value,
@@ -12,3 +14,5 @@ function processFormLogin(event) {
                 }
             ) 
 }
+
+export default processFormLogin

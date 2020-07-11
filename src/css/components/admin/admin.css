@@ -1,0 +1,15 @@
+#admin_menu{
+    width: 15vw;
+    height: 10vh;
+    background-color: rgba(165, 245, 165, 0.5);
+    font-size: 1.7rem;
+}
+#admin_header{
+    display: flex;
+    width: 100vw;
+}
+#admin_header h1{
+    position: relative;
+    margin: auto;
+
+}

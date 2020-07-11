@@ -7,6 +7,7 @@ import {
 import Header from "./Header";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact"
+import NotFound from "./../molecules/NotFound"
 
 
 
@@ -38,7 +39,7 @@ class Homepage extends React.Component {
                         <Contact />
                     </Route>
                     <Route path="/homepage/*">
-
+                    <NotFound/>
                     </Route>
                 </Switch>
             </Router>

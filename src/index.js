@@ -12,6 +12,7 @@ import Timesheet from "./components/Timesheet/Timesheet"
 import Admin from "./components/admin/Admin"
 
 import "./css/index.css"
+import NotFound from './components/molecules/NotFound';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,6 +29,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/">
           <Redirect to="/homepage/"/>
+        </Route>
+        <Route exact path="/*">
+        <NotFound/>
         </Route>
       </Switch>
     </Router>

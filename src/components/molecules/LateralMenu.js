@@ -8,10 +8,14 @@ class LateralMenu extends React.Component{
     }
     render(){
         const {displayCreateAdminAccount}= this.props
+        const {displayCreateAccount}= this.props
         return(
             <article id= "lateral_menu_options">
-                <button onClick= {()=> {displayCreateAdminAccount()}}>Crear Cuenta Administrador</button>
-                <button>Crear Cuenta Usuario</button>
+                <button onClick= {()=> {displayCreateAdminAccount()}}>Crear Administrador</button>
+                <button onClick= {()=> {displayCreateAccount()}}>Crear Cuenta Usuario</button>
+                <button>Histórico</button>
+                <button>Pendiente</button>
+                <button>Logout</button>
             </article>
         )
     }

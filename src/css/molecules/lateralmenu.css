@@ -1,4 +1,22 @@
+
+
+
+#lateral_menu_options{
+    background-color: rgba(165, 245, 165, 0.5);
+    position: absolute;
+    width: 15vw;
+    height: 100vh;
+    text-align: left;
+    }
+
 #lateral_menu_options button{
+
+    border: none;
     display: block;
     margin-top: 50px;
+    background-color: transparent;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
 }
+

@@ -1,0 +1,30 @@
+#register_form{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border: solid black;
+    width: 25vw;
+    padding: 25px;
+    font-size: 1.4rem;
+    /* background-image: url(./../../img/wallpaperadmin.jpg); */
+    }
+
+#register_form label{
+    display: block;
+}
+
+#register_form input{
+}
+
+#register_form fieldset{
+display: block;
+border: none;
+padding: 20px;
+}
+
+#register_form button{
+    font-size: 1rem;
+}
