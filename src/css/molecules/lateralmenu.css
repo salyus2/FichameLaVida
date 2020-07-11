@@ -2,11 +2,12 @@
 
 
 #lateral_menu_options{
-    background-color: rgba(165, 245, 165, 0.5);
+    background-color:  rgba(165, 245, 165);
     position: absolute;
     width: 15vw;
     height: 100vh;
     text-align: left;
+    float: none;
     }
 
 #lateral_menu_options button{

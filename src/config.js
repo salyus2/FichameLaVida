@@ -1,7 +1,7 @@
 const config = {
     api: {
         name: "Santirellenamelo",
-        url: "192.168.0.22/api",
+        url: "http://192.168.0.22/api",
     }
     
 }

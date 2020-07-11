@@ -15,6 +15,7 @@ class Login extends React.Component {
     onSubmit(event){
         event.preventDefault();
         console.log(event.target.email.value)
+        processForLogin(event)
     }
     
     render () {

@@ -1,6 +1,6 @@
 import React from "react";
 import LateralMenu from "./../molecules/LateralMenu"
-import MaterialTableDemo from './../molecules/Table';
+import Demo from "./../molecules/Table"
 
 import "./../../css/components/admin/admin.css"
 import UserForm from "../molecules/UserForm";
@@ -64,8 +64,10 @@ class Admin extends React.Component {
                     {isDisplayCreateAdminAccount && <UserForm typeForm= "admin" displayCreateAdminAccount= {this.displayCreateAdminAccount}/>}
                     {isDisplayCreateAccount && <UserForm typeForm= "user" displayCreateAccount= {this.displayCreateAccount}/>}
                 </header>
+                <body>
+                    <Demo/>
+                </body>
             </React.Fragment>
-            //<MaterialTableDemo/>
         )
     }
 }

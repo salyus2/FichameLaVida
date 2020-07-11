@@ -5,12 +5,16 @@ function processFormLogin(event) {
     email: event.target.email.value,
     password: event.target.password.value
 }
-    fetch(`${config.api.url}/login`,{
+
+    fetch('http://192.168.0.22:8080/api/login',{
         method: "POST",
-        body: data
+        headers: {
+        'Content-Type': 'application/json',
+    },
+        body: JSON.stringify(data)
             }) .then(
                 token=> {
-                    
+                    console.log(token)
                 }
             ) 
 }
