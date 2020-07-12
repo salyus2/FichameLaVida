@@ -1,6 +1,8 @@
 import React from "react";
 import LateralMenu from "./../molecules/LateralMenu"
-import Demo from "./../molecules/Table"
+import Tabla from "./../molecules/Table"
+import processFormLogin from "./../fetch/admin_login"
+import UserProfile from "./../molecules/session"
 
 import "./../../css/components/admin/admin.css"
 import UserForm from "../molecules/UserForm";
@@ -18,8 +20,7 @@ class Admin extends React.Component {
         this.displayMenu = this.displayMenu.bind(this)
         this.displayCreateAdminAccount = this.displayCreateAdminAccount.bind(this)
         this.displayCreateAccount = this.displayCreateAccount.bind(this)
-
-
+        this.onSubmit = this.onSubmit.bind(this)
     }
 
     displayMenu() {
@@ -42,6 +43,12 @@ class Admin extends React.Component {
             isDisplayCreateAccount: !isDisplayCreateAccount
         })
     }
+    onSubmit(event){
+        event.preventDefault();
+        console.log(event.target.email.value)
+        processFormLogin(event)
+    }
+    
 
     render() {
         const {
@@ -49,26 +56,53 @@ class Admin extends React.Component {
              isDisplayCreateAdminAccount,
              isDisplayCreateAccount
              } = this.state
+       const userId = UserProfile.getToken()
+       const role = UserProfile.getRole()
+    
+
+    if(userId && role==="admin"){
+
         return (
             <React.Fragment>
                 <header><div id="admin_header">
                     <button id= "admin_menu" onClick={() => { this.displayMenu() }}>Menu</button>
-                    <h1>JalamelaVida</h1>
+                    <h1>Fíchame la Vida</h1>
                     </div>
-                    {isShowLateralMenu && 
+                    {isDisplayCreateAdminAccount && <UserForm typeForm= "admin" displayCreateAdminAccount= {this.displayCreateAdminAccount}/>}
+                {isDisplayCreateAccount && <UserForm typeForm= "user" displayCreateAccount= {this.displayCreateAccount}/>}
+                </header>
+                {isShowLateralMenu && 
                     <LateralMenu
                      displayCreateAdminAccount= {this.displayCreateAdminAccount}
                      displayCreateAccount= {this.displayCreateAccount}
                      
                      />}
-                    {isDisplayCreateAdminAccount && <UserForm typeForm= "admin" displayCreateAdminAccount= {this.displayCreateAdminAccount}/>}
-                    {isDisplayCreateAccount && <UserForm typeForm= "user" displayCreateAccount= {this.displayCreateAccount}/>}
-                </header>
-                <body>
-                    <Demo/>
+                <body id= "admin_body">
+                    <Tabla/>
                 </body>
             </React.Fragment>
         )
+    }else{
+    
+        return( 
+            <React.Fragment>
+                <article id= "login">
+            <form onSubmit={e => {this.onSubmit(e)}}>
+            <fieldset className= "field-group">
+            <label>Email</label>
+            <input id= "email" type= "email" placeholder= "Email"/>
+            </fieldset>   
+            <fieldset className= "field-group">
+            <label>Contraseña</label>
+            <input id= "password" type= "password" placeholder= "Password"/>
+            </fieldset>
+            <button>Aceptar</button>
+            </form>
+            </article>
+            </React.Fragment>
+        )
+    
+}
     }
 }
 

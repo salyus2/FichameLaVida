@@ -13,3 +13,10 @@
     margin: auto;
 
 }
+
+#admin_body{
+    max-height: 80vh ;
+
+    overflow: scroll;
+    /* max-height: 97vh; */
+}

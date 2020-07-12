@@ -9,11 +9,9 @@ body{
 }
 
 #title{
-    font-size: 5rem;
     position: absolute;
-    top: 13vh;
-    right: 32vw;
-    color: white;
-    text-shadow: black 0px 0px 18px;
-    
+    top: 5vh;
+    right: 43vw;
+    background-color: transparent;
+    transform: scale(1);    
 }

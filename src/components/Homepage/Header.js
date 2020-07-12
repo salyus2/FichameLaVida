@@ -1,6 +1,7 @@
 import React from "react";
 import ImageSlide from "../molecules/ImageSlide";
 import Menu from "../molecules/Menu";
+import Logo from "./../../img/logo.png"
 
 import "./../../css/components/Homepage/header.css";
 
@@ -9,7 +10,7 @@ class Header extends React.Component {
         const {slideImage} = this.props;
         return(
             <React.Fragment>
-                <h1 id= "title">Fíchame la Vida</h1>
+                <h1 id= "title"><img src={Logo}/></h1>
                 <ImageSlide
                 slideImage= {slideImage}
                 />              

@@ -6,7 +6,7 @@ function processFormLogin(event) {
     const data= {
     email: event.target.email.value,
     password: event.target.password.value,
-    type: "user"   
+    type: "admin"   
 }
 
     fetch('http://192.168.0.22:8080/api/login',{
@@ -25,12 +25,13 @@ function processFormLogin(event) {
                     }
                 }
             ).then(token => {
-                console.log(token.accessToken,'token')
-                // sessionStorage = token.accessToken
+                console.log(token.accessToken)
+                console.log(token.role)
+
                 UserProfile.setToken(token.accessToken)
                 UserProfile.setRole(token.role)
 
-                window.location.href="/timesheet"
+                window.location.href="/admin"
             })
 }
 

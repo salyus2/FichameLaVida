@@ -24,14 +24,14 @@ class Login extends React.Component {
             <article id= "login">
                 <img src= {closer} alt= "Close Login" id= "closer" onClick= {()=> {hideLogin()}}/>
                 <form onSubmit={e => {this.onSubmit(e)}}>
-                <fielset className= "field-group">
+                <fieldset className= "field-group">
                 <label>Email</label>
                 <input id= "email" type= "email" placeholder= "Email"/>
-                </fielset>   
-                <fielset className= "field-group">
+                </fieldset>   
+                <fieldset className= "field-group">
                 <label>Contraseña</label>
                 <input id= "password" type= "password" placeholder= "Password"/>
-                </fielset>
+                </fieldset>
                 <button>Aceptar</button>
                 </form>
             </article>

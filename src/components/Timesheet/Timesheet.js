@@ -1,19 +1,36 @@
 import React from "react";
 import { TextField } from "@material-ui/core"
+import UserProfile from './../molecules/session';
+import createRegister from './../fetch/createRegister';
 
 import "./../../css/components/Timesheet/timesheet.css"
 
 class TimeSheet extends React.Component {
+    constructor(props){
+        super(props)
+        this.onSubmit= this.onSubmit.bind(this)
+    }
+
+    onSubmit(event){
+        event.preventDefault();
+        createRegister(event)
+    }
+
 
     render() {
+       const userId = UserProfile.getToken()
+       const role = UserProfile.getRole()
+       
+        if(!userId){
+
+        window.location="/homepage/"
+        }else if(role === "user"){
+
         const date = new Date()
         return (
             <article id="ficha">
-                <form>
-                    <fieldset className="name">
-                        <label>Nombre</label>
-                        <input id="name" type="name" placeholder="Name" />
-                    </fieldset>
+                
+                <form onSubmit={e => {this.onSubmit(e)}}>
                     <fieldset className="date">
                         <label>Día</label>
                         <TextField
@@ -25,18 +42,14 @@ class TimeSheet extends React.Component {
                             }}
                         />
                     </fieldset>
-                    <fieldset className="company">
-                        <label>Empresa</label>
-                        <input id="company" type="company" placeholder="Company" />
-                    </fieldset>
                     <fieldset className="workplace">
                         <label>Centro de Trabajo</label>
-                        <input id="workplace" type="workplace" placeholder="Workplace" />
+                        <input id="workplace" type="workplace" placeholder="Centro de Trabajo" />
                     </fieldset>
                     <fieldset className="start_time">
                         <label>Hora de Entrada</label>
                         <TextField
-                            id="time1"
+                            id="time_in"
                             type="time"
                             InputLabelProps={{
                                 shrink: true,
@@ -46,7 +59,7 @@ class TimeSheet extends React.Component {
                     <fieldset className="end_time">
                         <label>Hora de Salida</label>
                         <TextField
-                            id="time2"
+                            id="time_out"
                             type="time"
                             InputLabelProps={{
                                 shrink: true,
@@ -55,7 +68,7 @@ class TimeSheet extends React.Component {
                     </fieldset>
                     <fieldset className="text">
                         <label>Comentarios</label>
-                        <input id="text" type="text" placeholder="Text" />
+                        <textarea id="observations" type="text" placeholder="Incluye aquí tu comentario" />
                     </fieldset>
                     <button>Enviar</button>
                 </form>
@@ -63,7 +76,7 @@ class TimeSheet extends React.Component {
         )
     }
 
-
+}
 }
 
 
