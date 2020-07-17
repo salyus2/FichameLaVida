@@ -1,20 +1,21 @@
 #menu{
-
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
     margin: 0px;
     background-color: #C6F2D9;
-    padding-top: 0px;
+    padding: 0;
 }
 
 .menu{
-    padding: 5px 25px;
-    font-size: 2rem;
+    padding: 5px 0px;
+    font-size: 1.5rem;
     list-style: none;
     
 }
 
 .menu a{
+    display: block;
     border-style: solid;
     border-color: black;
     border-width: 5px;

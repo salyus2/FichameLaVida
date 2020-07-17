@@ -9,13 +9,15 @@ class Header extends React.Component {
     render() {
         const {slideImage} = this.props;
         return(
-            <React.Fragment>
-                <h1 id= "title"><img src={Logo}/></h1>
+            <header>
                 <ImageSlide
                 slideImage= {slideImage}
                 />              
-                <Menu/>            
-            </React.Fragment>
+                <section>
+                <h1 id="title"><img src={Logo}/></h1>
+                <Menu/>    
+                </section>        
+            </header>
         )
     }
 }
